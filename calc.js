@@ -15,7 +15,7 @@ const number = (number) => {
 
   if (operand === ""){
     targetNumber = targetNumber * 10 + number;
-    calc.innerHTML = targetNumber2;
+    calc.innerHTML = targetNumber + operand;
   }
   else {
     targetNumber2 = targetNumber2 * 10 + number;
