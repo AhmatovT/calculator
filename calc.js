@@ -1,9 +1,21 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", () => {
+  const ring = document.querySelector(".ring");
+  setTimeout(function () {
+    ring.style.opacity = "0";
+    setTimeout(function () {
+      ring.style.display = "none";
+    }, 500);
+  }, 1000);
+
+})
 const calc = document.querySelector(".calc p");
 var targetNumber = 0;
 var targetNumber2 = 0;
 var operand = "";
+
+
 
 const clearBoard = () => {
   targetNumber = 0;
@@ -12,7 +24,6 @@ const clearBoard = () => {
 
 const number = (number) => {
   console.log("sen" + number + "bosding");
-
   if (operand === ""){
     targetNumber = targetNumber * 10 + number;
     calc.innerHTML = targetNumber + operand;
@@ -22,6 +33,8 @@ const number = (number) => {
     calc.innerHTML = targetNumber2;
   }
 }
+
+
 
 const arifmetik = (operator) => {
   if (operator === "+"){
@@ -89,6 +102,5 @@ const assignment = () => {
   targetNumber2 = 0;
   calc.innerHTML = targetNumber;
 }
-
 
 
